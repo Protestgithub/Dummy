@@ -35,7 +35,7 @@ pipeline {
             steps {
                 
                 bat "npm i"
-                bat "npx cypress run --env Adminurl=http://125.16.139.20:8023/dfscontainer/#/ , apiBaseURL = http://172.25.48.237:3133 , apiURL = http://172.25.48.237:3133/otpservice/internal/genotp/ --browser ${BROWSER} --spec ${SPEC}  "
+                bat "npx cypress run --env Adminurl=https://rahulshettyacademy.com/angularpractice/, apiBaseURL = http://172.25.48.237:3133 , apiURL = http://172.25.48.237:3133/otpservice/internal/genotp/ --browser ${BROWSER} --spec ${SPEC}  "
                 
             }
         }

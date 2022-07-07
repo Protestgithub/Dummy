@@ -10,7 +10,7 @@ let name
 
 Given('I open Ecommerce page',function()
 {
-    cy.visit(Cypress.env('url')+"/angularpractice/")
+    cy.visit(Cypress.env('Adminurl'))
 
 })
 
