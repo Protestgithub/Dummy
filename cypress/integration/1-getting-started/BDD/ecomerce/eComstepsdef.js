@@ -15,6 +15,8 @@ Given('I open Ecommerce page',function()
 })
 
 When ('I add items to cart',function(){
+
+    cy.LoginAPI(Cypress.env('apiBaseURL'))
     homepage.getShopTab().click()
 
 this.data.productName.forEach(function(element) {

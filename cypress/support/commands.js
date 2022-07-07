@@ -19,9 +19,9 @@ cy.get('h4.card-title').each(($el,index,$list)=>{
     }
 })
  })
- Cypress.Commands.add("LoginAPI",()=>{
+ Cypress.Commands.add("LoginAPI",(url)=>{
 
- cy.request("POST","https://rahulshettyacademy.com/api/ecom/auth/login",
+ cy.request("POST",url,
  {"userEmail":"lohithgowda3636@gmail.com","userPassword":"Lohith@66"}).
  then(function(response)
  {
