@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-13T07:56:25.884Z",
+    "end": "2022-06-13T07:57:17.996Z",
+    "duration": 52112,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f746edbe-de8f-438d-9c65-55dda7caa51b",
+      "title": "",
+      "fullFile": "cypress/integration/1-getting-started/OPENEMR/emr4.js",
+      "file": "cypress/integration/1-getting-started/OPENEMR/emr4.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d2689562-fcc3-4fd7-b2e0-b46015c7e6a1",
+          "title": "the first test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "the first emr1",
+              "fullTitle": "the first test the first emr1",
+              "timedOut": null,
+              "duration": 40699,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://34.232.235.205/openemr/openemr/interface/login/login.php?site=default\");\ncy.get('#authUser').type(this.data.user);\ncy.get('#clearPass').type(this.data.password);\ncy.get('#login_form').invoke('attr', 'target', '_self');\ncy.get('#login-button').click(); //cy.get('[class=\"navbar-toggler-icon\"]').click()\ncy.get('#user_icon').click(); //cy.get('#logout_form').invoke('attr','target','_self')\ncy.get('[data-bind=\"click: logout\"]').click();",
+              "err": {},
+              "uuid": "3cc9ad46-ba93-4b3c-ab6b-893af768d98c",
+              "parentUUID": "d2689562-fcc3-4fd7-b2e0-b46015c7e6a1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3cc9ad46-ba93-4b3c-ab6b-893af768d98c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 40699,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
