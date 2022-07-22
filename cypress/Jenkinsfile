@@ -40,7 +40,7 @@ pipeline {
             steps {
                 
                 bat "npm i"
-                bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}  "
+                bat "DEBUG=cypress:* npx cypress run --browser ${BROWSER} --spec ${SPEC} 1> stdout.txt 2> logs.txt "
                 
             }
         }
