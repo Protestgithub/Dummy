@@ -32,6 +32,9 @@ pipeline {
         }
         
         stage('Testing') {
+            options {
+                      timeout(time: 1, unit: 'MINUTES') 
+                }
             steps {
                 
                 bat "npm i"
