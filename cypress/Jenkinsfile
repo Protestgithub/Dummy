@@ -38,7 +38,7 @@ pipeline {
             steps {
                 
                 bat "npm i"
-                bat "npx cypress run --env Adminurl=https://rahulshettyacademy.com/angularpractice/, apiBaseURL = https://rahulshettyacademy.com/api/ecom/auth/login , apiURL = http://172.25.48.237:3133/otpservice/internal/genotp/ --browser ${BROWSER} --spec ${SPEC}  "
+                bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}  "
                 
             }
         }
