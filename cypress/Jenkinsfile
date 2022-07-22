@@ -24,6 +24,7 @@ pipeline {
     //in one or more stage directives.
     stages {
         
+        
         stage('Build'){
             //The steps section defines a series of one or more steps to be executed in a given stage directive.
             steps {
@@ -33,6 +34,9 @@ pipeline {
         
         stage('Testing') {
             
+            options {
+                      timeout(time: 5, unit: 'MINUTES') 
+                }
             steps {
                 
                 bat "npm i"
