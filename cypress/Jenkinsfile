@@ -32,18 +32,46 @@ pipeline {
             }
         }
         
-        stage('Testing') {
-            
-            options {
-                      timeout(time: 2, unit: 'MINUTES') 
+       stage ('Cypress'){
+    parallel {
+        stage('Cypress 1') {
+            agent {
+                node {
+                    label 'agent-1'
                 }
+            }
             steps {
-                
                 bat "npm i"
-                bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
-                
+                bat "npx cypress run --record --key 2338ed9a-7128-4ea3-b981-8b9c8048001d --browser ${BROWSER} --spec ${SPEC}"
+               
             }
         }
+        stage('Cypress 2') {
+            agent {
+                node {
+                    label 'agent-2'
+                }
+            }
+            steps {
+                bat "npm i"
+                bat "npx cypress run --record --key 2338ed9a-7128-4ea3-b981-8b9c8048001d --browser ${BROWSER} --spec ${SPEC}"
+            }
+        }
+        stage('Cypress 3') {
+            agent {
+                node {
+                    label 'agent-3'
+                }
+            }
+            steps {
+                bat "npm i"
+                bat "npx cypress run --record --key 2338ed9a-7128-4ea3-b981-8b9c8048001d --browser ${BROWSER} --spec ${SPEC}"
+            }
+        }
+    }
+}
+
+
         
         stage('Deploy'){
             steps {
